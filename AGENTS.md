@@ -36,3 +36,17 @@ cd "/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/outputs/t
 任何发布错误必须写入项目根目录：
 
 `/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/logs/publish.log`
+
+## GitHub SSH 发布规则
+
+本仓库 origin 固定使用 SSH：
+
+`git@github.com:y1234567Z/national-admixture-bids.git`
+
+禁止使用 HTTPS remote：
+
+`https://github.com/y1234567Z/national-admixture-bids.git`
+
+publish.sh 和 retry_push.sh 在执行 git push 前必须检查 origin。如果 origin 不是 SSH remote，必须自动修复为：
+
+git remote set-url origin git@github.com:y1234567Z/national-admixture-bids.git
