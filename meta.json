@@ -1,8 +1,8 @@
 {
   "title": "Y的招标信息数据自动抓取",
   "siteTitle": "全国外加剂招标监控",
-  "updatedAt": "2026-06-16 20:23",
-  "generatedAt": "2026-06-16 20:23",
+  "updatedAt": "2026-06-16 21:19",
+  "generatedAt": "2026-06-16 21:19",
   "totalCount": 23,
   "provinceCount": 15,
   "provinces": [
@@ -479,5 +479,5 @@
       "云筑网（本部）"
     ]
   },
-  "lastRunAt": "2026-06-16 20:23:09"
+  "lastRunAt": "2026-06-16 21:19:52"
 }
