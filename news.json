@@ -1,25 +1,5 @@
 [
   {
-    "id": "infra-news-001",
-    "title": "成渝地区某高速扩容工程施工总承包中标",
-    "sourceName": "示例数据",
-    "sourceType": "示例数据",
-    "publishDate": "2026-06-16",
-    "province": "四川省",
-    "city": "成都市",
-    "projectType": "高速",
-    "projectName": "成渝地区高速扩容工程",
-    "contractor": "中交路建联合体",
-    "amount": "约86亿元",
-    "stage": "中标",
-    "valueLevel": "高",
-    "keywords": ["高速", "中标", "施工总承包", "混凝土"],
-    "summary": "项目包含路基、桥梁、互通及隧道工程，施工总承包阶段已明确，后续外加剂需求可能集中在桥梁、隧道和路面基层混凝土。",
-    "url": "",
-    "createdAt": "2026-06-16 09:00",
-    "updatedAt": "2026-06-16 09:00"
-  },
-  {
     "id": "infra-news-002",
     "title": "华东某抽水蓄能电站主体工程正式开工",
     "sourceName": "示例数据",
@@ -33,11 +13,22 @@
     "amount": "未公开",
     "stage": "开工",
     "valueLevel": "高",
-    "keywords": ["抽水蓄能", "开工", "主体施工", "拌合站"],
+    "keywords": [
+      "抽水蓄能",
+      "开工",
+      "主体施工",
+      "拌合站"
+    ],
     "summary": "工程进入主体施工准备阶段，地下厂房、输水系统和大坝工程混凝土体量大，适合持续跟踪外加剂、速凝剂和大体积混凝土材料机会。",
     "url": "",
     "createdAt": "2026-06-16 09:00",
-    "updatedAt": "2026-06-16 09:00"
+    "updatedAt": "2026-06-16 20:14",
+    "sourceStatus": "示例数据",
+    "region": "浙江省",
+    "owner": "",
+    "supervisor": "",
+    "designInstitute": "",
+    "opportunityScore": 100
   },
   {
     "id": "infra-news-003",
@@ -53,11 +44,53 @@
     "amount": "未公开",
     "stage": "首仓",
     "valueLevel": "高",
-    "keywords": ["水库", "大坝", "首仓浇筑", "大体积混凝土"],
+    "keywords": [
+      "水库",
+      "大坝",
+      "首仓浇筑",
+      "大体积混凝土"
+    ],
     "summary": "首仓浇筑表明大坝主体混凝土施工已启动，后续温控、防裂、缓凝和减水剂需求值得重点关注。",
     "url": "",
     "createdAt": "2026-06-16 09:00",
-    "updatedAt": "2026-06-16 09:00"
+    "updatedAt": "2026-06-16 20:14",
+    "sourceStatus": "示例数据",
+    "region": "甘肃省",
+    "owner": "",
+    "supervisor": "",
+    "designInstitute": "",
+    "opportunityScore": 90
+  },
+  {
+    "id": "infra-news-001",
+    "title": "成渝地区某高速扩容工程施工总承包中标",
+    "sourceName": "示例数据",
+    "sourceType": "示例数据",
+    "publishDate": "2026-06-16",
+    "province": "四川省",
+    "city": "成都市",
+    "projectType": "高速",
+    "projectName": "成渝地区高速扩容工程",
+    "contractor": "中交路建联合体",
+    "amount": "约86亿元",
+    "stage": "中标",
+    "valueLevel": "中",
+    "keywords": [
+      "高速",
+      "中标",
+      "施工总承包",
+      "混凝土"
+    ],
+    "summary": "项目包含路基、桥梁、互通及隧道工程，施工总承包阶段已明确，后续外加剂需求可能集中在桥梁、隧道和路面基层混凝土。",
+    "url": "",
+    "createdAt": "2026-06-16 09:00",
+    "updatedAt": "2026-06-16 20:14",
+    "sourceStatus": "示例数据",
+    "region": "四川省",
+    "owner": "",
+    "supervisor": "",
+    "designInstitute": "",
+    "opportunityScore": 85
   },
   {
     "id": "infra-news-004",
@@ -72,12 +105,23 @@
     "contractor": "中铁隧道局",
     "amount": "未公开",
     "stage": "贯通",
-    "valueLevel": "高",
-    "keywords": ["高铁", "隧道", "隧道贯通", "二衬"],
+    "valueLevel": "中",
+    "keywords": [
+      "高铁",
+      "隧道",
+      "隧道贯通",
+      "二衬"
+    ],
     "summary": "控制性隧道贯通后仍有二衬、附属洞室和站后配套施工需求，需跟踪后续混凝土材料采购节奏。",
     "url": "",
     "createdAt": "2026-06-16 09:00",
-    "updatedAt": "2026-06-16 09:00"
+    "updatedAt": "2026-06-16 20:14",
+    "sourceStatus": "示例数据",
+    "region": "湖北省",
+    "owner": "",
+    "supervisor": "",
+    "designInstitute": "",
+    "opportunityScore": 85
   },
   {
     "id": "infra-news-005",
@@ -92,32 +136,23 @@
     "contractor": "中交四航局",
     "amount": "约32亿元",
     "stage": "中标",
-    "valueLevel": "高",
-    "keywords": ["港口", "码头", "EPC", "混凝土"],
+    "valueLevel": "中",
+    "keywords": [
+      "港口",
+      "码头",
+      "EPC",
+      "混凝土"
+    ],
     "summary": "码头结构、堆场、护岸和配套道路混凝土用量较大，项目中标后可关注拌合站建设和水工混凝土外加剂需求。",
     "url": "",
     "createdAt": "2026-06-16 09:00",
-    "updatedAt": "2026-06-16 09:00"
-  },
-  {
-    "id": "infra-news-006",
-    "title": "华北城市地下综合管廊项目开工建设",
-    "sourceName": "示例数据",
-    "sourceType": "示例数据",
-    "publishDate": "2026-06-11",
-    "province": "河北省",
-    "city": "石家庄市",
-    "projectType": "管廊",
-    "projectName": "华北城市地下综合管廊项目",
-    "contractor": "中建三局",
-    "amount": "约18亿元",
-    "stage": "开工",
-    "valueLevel": "中",
-    "keywords": ["管廊", "地下空间", "开工建设", "主体施工"],
-    "summary": "项目属于市政大型地下空间工程，已进入开工阶段，需继续跟踪主体结构混凝土与防水抗裂材料采购信息。",
-    "url": "",
-    "createdAt": "2026-06-16 09:00",
-    "updatedAt": "2026-06-16 09:00"
+    "updatedAt": "2026-06-16 20:14",
+    "sourceStatus": "示例数据",
+    "region": "广东省",
+    "owner": "",
+    "supervisor": "",
+    "designInstitute": "",
+    "opportunityScore": 75
   },
   {
     "id": "infra-news-007",
@@ -133,11 +168,53 @@
     "amount": "未公开",
     "stage": "施工进展",
     "valueLevel": "中",
-    "keywords": ["地铁", "TBM始发", "隧道", "施工进展"],
+    "keywords": [
+      "地铁",
+      "TBM始发",
+      "隧道",
+      "施工进展"
+    ],
     "summary": "盾构区间进入实质施工阶段，短期更偏管片、同步注浆和盾构材料需求，后续车站主体混凝土仍需跟踪。",
     "url": "",
     "createdAt": "2026-06-16 09:00",
-    "updatedAt": "2026-06-16 09:00"
+    "updatedAt": "2026-06-16 20:14",
+    "sourceStatus": "示例数据",
+    "region": "重庆市",
+    "owner": "",
+    "supervisor": "",
+    "designInstitute": "",
+    "opportunityScore": 70
+  },
+  {
+    "id": "infra-news-006",
+    "title": "华北城市地下综合管廊项目开工建设",
+    "sourceName": "示例数据",
+    "sourceType": "示例数据",
+    "publishDate": "2026-06-11",
+    "province": "河北省",
+    "city": "石家庄市",
+    "projectType": "管廊",
+    "projectName": "华北城市地下综合管廊项目",
+    "contractor": "中建三局",
+    "amount": "约18亿元",
+    "stage": "开工",
+    "valueLevel": "低",
+    "keywords": [
+      "管廊",
+      "地下空间",
+      "开工建设",
+      "主体施工"
+    ],
+    "summary": "项目属于市政大型地下空间工程，已进入开工阶段，需继续跟踪主体结构混凝土与防水抗裂材料采购信息。",
+    "url": "",
+    "createdAt": "2026-06-16 09:00",
+    "updatedAt": "2026-06-16 20:14",
+    "sourceStatus": "示例数据",
+    "region": "河北省",
+    "owner": "",
+    "supervisor": "",
+    "designInstitute": "",
+    "opportunityScore": 65
   },
   {
     "id": "infra-news-008",
@@ -153,10 +230,20 @@
     "amount": "未公开",
     "stage": "其他",
     "valueLevel": "低",
-    "keywords": ["市政大型工程", "会议报道", "城投"],
+    "keywords": [
+      "市政大型工程",
+      "会议报道",
+      "城投"
+    ],
     "summary": "公开信息以会议推进为主，缺少明确施工标段、开工节点和混凝土施工细节，暂列为低价值线索。",
     "url": "",
     "createdAt": "2026-06-16 09:00",
-    "updatedAt": "2026-06-16 09:00"
+    "updatedAt": "2026-06-16 20:14",
+    "sourceStatus": "示例数据",
+    "region": "安徽省",
+    "owner": "",
+    "supervisor": "",
+    "designInstitute": "",
+    "opportunityScore": 65
   }
 ]

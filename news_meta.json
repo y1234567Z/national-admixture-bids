@@ -1,7 +1,14 @@
 {
-  "generatedAt": "2026-06-16 19:58",
+  "generatedAt": "2026-06-16 20:14",
   "totalNews": 8,
   "todayNew": 8,
-  "highValueCount": 5,
-  "sourceCount": 1
+  "highValueCount": 2,
+  "sourceCount": 1,
+  "mediumValueCount": 4,
+  "lowValueCount": 2,
+  "officialSourceCount": 156,
+  "wechatSourceCount": 156,
+  "limitedSourceCount": 156,
+  "fetchSuccessCount": 8,
+  "scoringRule": "opportunityScore 只按 projectType 计算，不使用关键词、阶段、施工单位、地区或来源加分。"
 }
