@@ -1,14 +1,18 @@
 #!/bin/bash
 set -e
 
+cd "$(dirname "$0")"
+
 git add .
 
 if git diff --cached --quiet; then
-  echo "没有检测到文件变化，无需发布。"
-  exit 0
+  echo "没有检测到文件变化，跳过 commit。"
+else
+  git commit -m "auto update $(date '+%Y-%m-%d %H:%M')"
 fi
 
-git commit -m "auto update $(date '+%Y-%m-%d %H:%M')"
 git push origin main
 
-echo "发布完成：GitHub 已更新，Cloudflare Pages 会自动部署。"
+echo "✅ GitHub发布成功"
+echo "✅ Cloudflare自动部署中"
+echo "✅ 网站地址：https://www.yzbids.cn"
