@@ -1,0 +1,482 @@
+{
+  "title": "中建西部建设新材料有限公司招标信息自动抓取数据",
+  "siteTitle": "全国外加剂招标监控",
+  "updatedAt": "2026-06-15 17:10",
+  "generatedAt": "2026-06-15 17:10",
+  "totalCount": 23,
+  "provinceCount": 15,
+  "provinces": [
+    "福建",
+    "广西",
+    "贵州",
+    "湖北",
+    "江西",
+    "辽宁",
+    "宁夏",
+    "山西",
+    "陕西",
+    "四川",
+    "西藏",
+    "新疆",
+    "云南",
+    "浙江"
+  ],
+  "byCategory": {
+    "正在招标": 9,
+    "历史招标": 14
+  },
+  "changeCount": 0,
+  "platformSummary": {
+    "sourceRowCount": 67,
+    "configuredPlatformCount": 65,
+    "groupCounts": {
+      "nationalEnterprise": 35,
+      "regionalPublic": 24,
+      "aggregator": 6
+    },
+    "layers": [
+      {
+        "layerId": "layer-1",
+        "label": "第一层：全国性央国企/行业采购平台",
+        "platformGroup": "national_enterprise",
+        "platformCount": 35,
+        "platforms": [
+          {
+            "platformId": "platform-01-中国电建设备物资集中采购平台",
+            "platformName": "中国电建设备物资集中采购平台",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-02-中交集团供应链管理信息系统",
+            "platformName": "中交集团供应链管理信息系统",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-03-中铁鲁班商务网",
+            "platformName": "中铁鲁班商务网",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-04-中国铁建物资采购网",
+            "platformName": "中国铁建物资采购网",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-05-中建科工电子招采平台",
+            "platformName": "中建科工电子招采平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-06-铁建云采平台",
+            "platformName": "铁建云采平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-07-铁建汇采工程物资设备电商平台",
+            "platformName": "铁建汇采工程物资设备电商平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-08-中国核工业集团有限公司电子采购平台",
+            "platformName": "中国核工业集团有限公司 电子采购平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-09-国家能源招标网",
+            "platformName": "国家能源招标网",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-10-华电电子商务平台",
+            "platformName": "华电电子商务平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-11-华润集团守正电子招标采购平台",
+            "platformName": "华润集团守正电子招标采购平台",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-12-四川公共交易资源中心",
+            "platformName": "四川公共交易资源中心",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-13-筑友集团招采一体化平台",
+            "platformName": "筑友集团招采一体化平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-14-华新水泥股份有限公司网上招投标系统",
+            "platformName": "华新水泥股份有限公司网上招投标系统",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-15-国铁采购平台",
+            "platformName": "国铁采购平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-19-新天山水泥",
+            "platformName": "新天山水泥",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-22-五矿集团有限公司采购电子商务平台",
+            "platformName": "五矿集团有限公司采购电子商务平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-23-三一平台",
+            "platformName": "三一平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-24-化学云采",
+            "platformName": "化学云采",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-25-中国安能电子商务平台",
+            "platformName": "中国安能电子商务平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-28-华能集团电子商务平台",
+            "platformName": "华能集团电子商务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-29-四川省水利水电工程局有限公司",
+            "platformName": "四川省水利水电工程局有限公司",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-30-四川路桥招标采购平台",
+            "platformName": "四川路桥招标采购平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-31-中化电子招标平台",
+            "platformName": "中化电子招标平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-32-中国能建电子采购平台",
+            "platformName": "中国能建电子采购平台",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-33-中煤矿建数智一体化平台",
+            "platformName": "中煤矿建数智一体化平台",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-34-优质采",
+            "platformName": "优质采",
+            "priority": "P2",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-35-安徽建工集团电子化招采平台",
+            "platformName": "安徽建工集团电子化招采平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-37-云筑网湖北中建新材",
+            "platformName": "云筑网（湖北中建新材）",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-38-云筑网本部",
+            "platformName": "云筑网（本部）",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-39-云筑网福建中建新材",
+            "platformName": "云筑网（福建中建新材）",
+            "priority": "P1",
+            "searchStrategy": "direct_search"
+          },
+          {
+            "platformId": "platform-42-天府云销数字服务平台",
+            "platformName": "天府云销数字服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-63-中煤招标与采购网",
+            "platformName": "中煤招标与采购网",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-64-湖北联投电子采购平台",
+            "platformName": "湖北联投电子采购平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-65-湖北交投电子采购平台",
+            "platformName": "湖北交投电子采购平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          }
+        ]
+      },
+      {
+        "layerId": "layer-2",
+        "label": "第二层：省级/市级公共资源交易平台与政府采购网",
+        "platformGroup": "regional_public",
+        "platformCount": 24,
+        "platforms": [
+          {
+            "platformId": "platform-21-陕西公众资源交易平台",
+            "platformName": "陕西公众资源交易平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-36-新点电子交易平台",
+            "platformName": "新点电子交易平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-40-酒钢集团电子交易平台",
+            "platformName": "酒钢集团电子交易平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-41-重庆市公共资源交易网",
+            "platformName": "重庆市公共资源交易网",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-43-广西公共资源交易服务平台",
+            "platformName": "广西公共资源交易服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-44-云南省公共资源交易电子服务系统",
+            "platformName": "云南省公共资源交易电子服务系统",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-45-广东公共资源交易中心",
+            "platformName": "广东公共资源交易中心",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-46-贵州公共资源交易公共服务平台",
+            "platformName": "贵州公共资源交易公共服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-47-湖北省电子招投标交易云平台",
+            "platformName": "湖北省电子招投标交易云平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-48-全国公共资源交易平台安徽省",
+            "platformName": "全国公共资源交易平台（安徽省）",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-49-江苏省公共资源交易电子服务平台",
+            "platformName": "江苏省公共资源交易电子服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-50-湖南省公共资源交易服务平台",
+            "platformName": "湖南省公共资源交易服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-51-河北省公共资源交易公共服务平台",
+            "platformName": "河北省公共资源交易公共服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-52-天津市公共资源交易电子服务平台",
+            "platformName": "天津市公共资源交易电子服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-53-北京市公共资源交易服务平台",
+            "platformName": "北京市公共资源交易服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-54-山东省公共资源交易网",
+            "platformName": "山东省公共资源交易网",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-55-河南省公共资源交易公共服务平台",
+            "platformName": "河南省公共资源交易公共服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-56-新疆自治区政府采购网",
+            "platformName": "新疆自治区政府采购网",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-57-甘肃省公共资源交易电子服务系统",
+            "platformName": "甘肃省公共资源交易电子服务系统",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-58-青海省公共资源交易网",
+            "platformName": "青海省公共资源交易网",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-59-福建省公共资源交易电子公共服务平台",
+            "platformName": "福建省公共资源交易电子公共服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-60-浙江省公共资源交易服务平台",
+            "platformName": "浙江省公共资源交易服务平台",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-61-全国公共资源交易平台海南省",
+            "platformName": "全国公共资源交易平台（海南省）",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          },
+          {
+            "platformId": "platform-62-上海市公共资源交易网",
+            "platformName": "上海市公共资源交易网",
+            "priority": "P2",
+            "searchStrategy": "public_notice_only"
+          }
+        ]
+      },
+      {
+        "layerId": "layer-3",
+        "label": "第三层：聚合站与补漏站点",
+        "platformGroup": "aggregator",
+        "platformCount": 6,
+        "platforms": [
+          {
+            "platformId": "platform-16-中国招标投标公共服务平台",
+            "platformName": "中国招标投标公共服务平台",
+            "priority": "P3",
+            "searchStrategy": "aggregator_fallback"
+          },
+          {
+            "platformId": "platform-17-千里马",
+            "platformName": "千里马",
+            "priority": "P3",
+            "searchStrategy": "aggregator_fallback"
+          },
+          {
+            "platformId": "platform-18-采购与招标网",
+            "platformName": "采购与招标网",
+            "priority": "P3",
+            "searchStrategy": "aggregator_fallback"
+          },
+          {
+            "platformId": "platform-20-采购招标综合网",
+            "platformName": "采购招标综合网",
+            "priority": "P3",
+            "searchStrategy": "aggregator_fallback"
+          },
+          {
+            "platformId": "platform-26-电力招标网",
+            "platformName": "电力招标网",
+            "priority": "P3",
+            "searchStrategy": "aggregator_fallback"
+          },
+          {
+            "platformId": "platform-27-中国采购与招标网",
+            "platformName": "中国采购与招标网",
+            "priority": "P3",
+            "searchStrategy": "aggregator_fallback"
+          }
+        ]
+      }
+    ],
+    "phases": [
+      {
+        "phaseId": "platform_discovery",
+        "label": "平台发现"
+      },
+      {
+        "phaseId": "announcement_capture",
+        "label": "公告抓取"
+      },
+      {
+        "phaseId": "structured_mapping",
+        "label": "结构化归档"
+      },
+      {
+        "phaseId": "result_followup",
+        "label": "结果追踪"
+      }
+    ],
+    "priorityPlatforms": [
+      "中国电建设备物资集中采购平台",
+      "中铁鲁班商务网",
+      "中国铁建物资采购网",
+      "国家能源招标网",
+      "华润集团守正电子招标采购平台",
+      "中国能建电子采购平台",
+      "云筑网（湖北中建新材）",
+      "云筑网（本部）"
+    ]
+  }
+}
