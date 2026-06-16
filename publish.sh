@@ -47,7 +47,7 @@ echo "Cloudflare 部署状态：retry_push.sh 推送成功后自动触发"
 nohup "$RETRY_PUSH" >/tmp/yzbids_retry_push.log 2>&1 &
 RETRY_PID=$!
 echo "retry_push.sh PID：$RETRY_PID"
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] publish.sh 已创建 commit $COMMIT_ID，并启动 retry_push.sh，PID=$RETRY_PID。" >> "$ERROR_LOG"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] publish.sh 已创建 commit ${COMMIT_ID}，并启动 retry_push.sh，PID=${RETRY_PID}。" >> "$ERROR_LOG"
 
 echo "✅ 本地发布成功"
 echo "✅ Cloudflare自动部署中"
