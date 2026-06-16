@@ -3,6 +3,7 @@ set -Eeuo pipefail
 
 PROJECT_DIR="/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台"
 PUBLISH_DIR="/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/outputs/tencent-static"
+RETRY_PUSH="$PROJECT_DIR/retry_push.sh"
 LOG_DIR="$PROJECT_DIR/logs"
 ERROR_LOG="$LOG_DIR/publish.log"
 
@@ -39,23 +40,14 @@ git add .
 git commit --allow-empty -m "auto update $(date '+%Y-%m-%d %H:%M')"
 COMMIT_ID="$(git rev-parse --short HEAD)"
 
-set +e
-PUSH_OUTPUT="$(git push origin main 2>&1)"
-PUSH_CODE=$?
-set -e
-
-echo "$PUSH_OUTPUT"
-
 echo "commit id：$COMMIT_ID"
+echo "push 是否成功：后台重试已启动"
+echo "Cloudflare 部署状态：retry_push.sh 推送成功后自动触发"
 
-if [ "$PUSH_CODE" -eq 0 ]; then
-  echo "push 是否成功：成功"
-  echo "Cloudflare 部署状态：已触发自动部署"
-else
-  echo "push 是否成功：已执行（当前环境不验证外网状态）"
-  echo "Cloudflare 部署状态：不做外网验证，按本机已配置自动部署处理"
-  log_error "git push origin main 已执行但当前环境返回非零：$PUSH_OUTPUT"
-fi
+nohup "$RETRY_PUSH" >/tmp/yzbids_retry_push.log 2>&1 &
+RETRY_PID=$!
+echo "retry_push.sh PID：$RETRY_PID"
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] publish.sh 已创建 commit $COMMIT_ID，并启动 retry_push.sh，PID=$RETRY_PID。" >> "$ERROR_LOG"
 
 echo "✅ 本地发布成功"
 echo "✅ Cloudflare自动部署中"
