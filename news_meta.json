@@ -1,17 +1,39 @@
 {
-  "generatedAt": "2026-06-17 09:12",
+  "generatedAt": "2026-06-17 09:53",
   "totalNews": 8,
   "todayNew": 0,
   "highValueCount": 2,
   "sourceCount": 1,
-  "mediumValueCount": 4,
-  "lowValueCount": 2,
-  "officialSourceCount": 156,
-  "wechatSourceCount": 156,
-  "limitedSourceCount": 156,
+  "mediumValueCount": 2,
+  "lowValueCount": 3,
   "fetchSuccessCount": 8,
-  "scoringRule": "opportunityScore 只按 projectType 计算，不使用关键词、阶段、施工单位、地区或来源加分。",
+  "scoringRule": "opportunityScore 按文章阶段和减水剂/速凝剂业务机会计算，不按公众号或来源排序。",
   "highTrackingCount": 3,
   "noTrackingCount": 0,
-  "trackingRule": "trackingValue 从 100 起，根据混凝土施工、拌合站、主体施工、二衬、主体完工、项目完工等进度关键词扣分。"
+  "trackingRule": "trackingValue 从 100 起，根据混凝土施工、拌合站、主体施工、二衬、主体完工、项目完工等进度关键词扣分。",
+  "manualWechatDir": "/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/manual/wechat_articles",
+  "admixtureOpportunityRule": "减水剂/速凝剂机会优先看项目刚中标、项目部成立、实验室/试验室/拌合站建设、材料试验、配合比验证和开工前准备；主体施工、贯通、合龙、完工降低机会。",
+  "articleFirstMode": true,
+  "discoveredArticleCount": 1414,
+  "parsedArticleCount": 8,
+  "enteredNewsCount": 8,
+  "highValueArticleCount": 2,
+  "mediumValueArticleCount": 2,
+  "lowValueArticleCount": 3,
+  "articleSources": [
+    "央企官网新闻",
+    "地方平台官网新闻",
+    "微信公众号公开文章",
+    "行业媒体",
+    "招投标平台",
+    "政府网站",
+    "搜索引擎发现的公开文章",
+    "本地人工补录池"
+  ],
+  "articleDiscoveryChannels": [
+    "site:mp.weixin.qq.com 关键词组合搜索",
+    "mp.weixin.qq.com公开链接读取",
+    "搜索引擎公开文章发现",
+    "manual/wechat_articles 人工补录池"
+  ]
 }

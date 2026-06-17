@@ -113,6 +113,7 @@
     .news-main { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: start; }
     .news-title { margin: 0; font-size: 17px; line-height: 1.38; }
     .contractor-line { margin-top: 7px; color: var(--text); font-size: 13px; font-weight: 700; }
+    .source-line { margin-top: 6px; color: var(--muted); font-size: 13px; }
     .news-meta { display: flex; flex-wrap: wrap; gap: 7px 12px; margin-top: 9px; color: var(--muted); font-size: 13px; }
     .opportunity-note { margin-top: 9px; display: inline-flex; max-width: 100%; color: #2f6f4e; background: rgba(34,197,94,.10); border: 1px solid rgba(34,197,94,.12); border-radius: 12px; padding: 7px 9px; font-size: 13px; line-height: 1.45; }
     .opp-mid .opportunity-note { color: #3b5f96; background: rgba(79,124,255,.09); border-color: rgba(79,124,255,.12); }
@@ -369,15 +370,15 @@
       const near = rows.filter((row) => row.deadlineStatus === "near");
       const todayNew = rows.filter((row) => row.isNew === "是");
       const business = rows.filter((row) => [row.performance, row.payment, row.settlement].some(good));
-      const limited = Number(payload.newsMeta?.limitedSourceCount || 0);
-      const sourceItems = limited
-        ? [`${limited} 个公众号来源受限，任务不会中断。`, ...(state.sourceExpanded ? ["受限来源会按记录保留，不会因为登录、验证码或公开搜索限制中断每日抓取。"] : [])]
-        : ["当前没有来源异常。"];
+      const failedArticles = Number(payload.newsMeta?.discoveredArticleCount || 0) - Number(payload.newsMeta?.parsedArticleCount || 0);
+      const sourceItems = failedArticles > 0
+        ? [`${failedArticles} 条文章发现任务未解析成功。`, ...(state.sourceExpanded ? ["失败原因按搜索不到、无公开文章、微信限制、反爬限制、文章删除、链接失效、解析失败记录；有价值文章可进入人工补录池。"] : [])]
+        : ["当前没有文章发现异常。"];
       const groups = [
         ["临近截止", "near", near.map((row) => `${row.province || ""}${row.name}`)],
         ["今日新增", "new", todayNew.map((row) => `${row.province || ""}${row.name}`)],
         ["重要商务条款", "business", business.map((row) => `${row.province || ""}${row.name}`)],
-        ["来源异常提醒", "source", sourceItems],
+        ["文章发现提醒", "source", sourceItems],
       ];
       els.summaryList.innerHTML = groups.map(([title, action, items]) => {
         const expanded = Boolean(state.summaryExpanded[action]) || action === "source" && state.sourceExpanded;
@@ -410,27 +411,31 @@
       renderFetchStatus();
     }
     function renderFetchStatus() {
-      const tenderErrorCount = 0;
-      const wechatErrorCount = Number(payload.newsMeta?.limitedSourceCount || 0);
+      const discovered = Number(payload.newsMeta?.discoveredArticleCount || 0);
+      const parsed = Number(payload.newsMeta?.parsedArticleCount || 0);
+      const entered = Number(payload.newsMeta?.enteredNewsCount || 0);
+      const failed = Math.max(0, discovered - parsed);
       els.fetchStatus.classList.toggle("open", state.fetchExpanded);
-      els.fetchStatus.innerHTML = `<h3>数据抓取状态</h3>
+      els.fetchStatus.innerHTML = `<h3>文章发现状态</h3>
         <ul>
-          <li>招标网站异常 ${tenderErrorCount} 个</li>
-          <li>公众号异常 ${wechatErrorCount} 个</li>
+          <li>今日发现文章 ${discovered} 篇</li>
+          <li>成功解析 ${parsed} 篇</li>
+          <li>进入基建动态 ${entered} 篇</li>
+          <li>文章发现失败 ${failed} 条</li>
         </ul>
         <button id="fetch-status-toggle">${state.fetchExpanded ? "收起详情" : "查看详情"}</button>
-        <div class="fetch-detail">状态表已生成：reports/fetch_status_latest.md。公众号异常主要来自公开搜索、登录环境或微信访问限制；招标网站异常会在后续抓取流程中按平台记录。</div>`;
+        <div class="fetch-detail">状态表已生成：reports/fetch_status_latest.md。失败按文章发现任务记录，不再统计公众号主页是否可访问。</div>`;
       document.getElementById("fetch-status-toggle")?.addEventListener("click", () => {
         state.fetchExpanded = !state.fetchExpanded;
         renderFetchStatus();
       });
     }
     function sortNews(items) {
-      return [...items].sort((a, b) => newsOpportunity(b).score - newsOpportunity(a).score || Number(b.trackingValue || 0) - Number(a.trackingValue || 0) || String(b.publishDate || "").localeCompare(String(a.publishDate || "")));
+      return [...items].sort((a, b) => Number(b.opportunityScore || newsOpportunity(b).score) - Number(a.opportunityScore || newsOpportunity(a).score) || Number(b.opportunityStagePriority || 0) - Number(a.opportunityStagePriority || 0) || String(b.publishDate || "").localeCompare(String(a.publishDate || "")));
     }
     function renderTopFive(news) {
-      const top = sortNews(news).slice(0, 5);
-      els.topFive.innerHTML = `<h3>今日最值得跟踪 TOP5</h3><div class="rank-list">${top.map((item, index) => `<div class="rank-item"><span class="rank-num">${index + 1}</span><span class="rank-name">${escapeHtml(item.projectName || item.title)}<br><small>${escapeHtml(item.stage || "")} ${escapeHtml(item.publishDate || "")}</small></span></div>`).join("")}</div>`;
+      const top = sortNews(news).slice(0, 10);
+      els.topFive.innerHTML = `<h3>TOP10项目机会榜</h3><div class="rank-list">${top.map((item, index) => `<div class="rank-item"><span class="rank-num">${index + 1}</span><span class="rank-name">${escapeHtml(item.projectName || item.title)}<br><small>${escapeHtml(item.opportunityLevel || item.stage || "")} ${escapeHtml(item.publishDate || "")}</small></span></div>`).join("")}</div>`;
     }
     function renderNewsCard(item) {
       const place = [item.province, item.city].filter(Boolean).join(" ");
@@ -439,7 +444,8 @@
       return `<article class="card news-card ${escapeHtml(opp.className)}"><div class="news-main"><div>
         <h3 class="news-title">${escapeHtml(item.projectName || item.title)}</h3>
         ${item.contractor ? `<div class="contractor-line">施工单位：${escapeHtml(item.contractor)}</div>` : ""}
-        <div class="news-meta">${[item.projectType, item.stage, place].filter(Boolean).map(escapeHtml).join(" / ")}</div>
+        ${item.sourceName ? `<div class="source-line">来源：${escapeHtml(item.sourceName)}${item.sourceType ? ` / ${escapeHtml(item.sourceType)}` : ""}</div>` : ""}
+        <div class="news-meta">${[item.stage, place, item.publishDate].filter(Boolean).map(escapeHtml).join(" / ")}</div>
         <div class="opportunity-note">${escapeHtml(opp.label)}：${escapeHtml(opp.note)}</div>
       </div><div class="stars">${stars(item.trackingValue)}</div></div>
       ${original}
@@ -456,6 +462,12 @@
       return [item.title, item.projectName, item.stage, item.summary, item.keywords?.join(" "), item.contractor].join(" ");
     }
     function newsOpportunity(item) {
+      if (item.businessOpportunity) {
+        const level = item.admixtureOpportunity || "待判断";
+        const score = Number(item.opportunityStagePriority || 40);
+        const className = score >= 80 ? "opp-high" : score >= 55 ? "opp-mid" : score <= 25 ? "opp-risk" : "opp-low";
+        return { score, className, label: `减水剂机会${level}`, note: item.businessOpportunity };
+      }
       const text = newsText(item);
       const high = /中标|施工总承包中标|EPC中标|项目部成立|实验室建设|拌合站建设|材料招标准备|进场准备/.test(text);
       const mid = /开工|首仓|隧道进洞|桩基开始/.test(text);
