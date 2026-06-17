@@ -8,6 +8,11 @@ LOG_DIR="$PROJECT_DIR/logs"
 ERROR_LOG="$LOG_DIR/publish.log"
 DAILY_REPORT="$LOG_DIR/daily_report.log"
 SSH_REMOTE="git@github.com:y1234567Z/national-admixture-bids.git"
+export HOME="/Users/q"
+export USER="q"
+export LOGNAME="q"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export GIT_SSH_COMMAND="ssh -i /Users/q/.ssh/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
 
 mkdir -p "$LOG_DIR"
 
@@ -30,6 +35,20 @@ ensure_ssh_remote() {
   git remote -v
 }
 
+unpushed_count() {
+  git log origin/main..HEAD --oneline 2>/dev/null | wc -l | tr -d " "
+}
+
+start_retry_if_unpushed() {
+  local count
+  count="$(unpushed_count)"
+  if [ "$count" != "0" ]; then
+    echo "检测到未推送 commit 数量：$count，启动 retry_push.sh。"
+    nohup "$RETRY_PUSH" >/tmp/yzbids_retry_push.log 2>&1 &
+    echo "retry_push.sh PID：$!"
+  fi
+}
+
 trap 'log_error "publish.sh 第 $LINENO 行失败，退出码 $?"' ERR
 
 if [ ! -d "$PUBLISH_DIR" ]; then
@@ -49,6 +68,7 @@ if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
 fi
 
 ensure_ssh_remote
+start_retry_if_unpushed
 
 echo "当前目录：$(pwd)"
 echo "Git 分支：$(git branch --show-current)"
@@ -95,7 +115,7 @@ awk '
 echo "commit id：$COMMIT_ID"
 echo "正在执行 git push origin main..."
 set +e
-PUSH_OUTPUT="$(git push origin main 2>&1)"
+PUSH_OUTPUT="$(GIT_SSH_COMMAND="$GIT_SSH_COMMAND" git push origin main 2>&1)"
 PUSH_CODE=$?
 set -e
 
