@@ -1,8 +1,8 @@
 #!/bin/bash
 set -Eeuo pipefail
 
-PROJECT_DIR="/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台"
-PUBLISH_DIR="/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/outputs/tencent-static"
+PROJECT_DIR="/Users/q/AIWorkspace/04_AI_Center/YZBIDS/National_Admixture_Bids_Platform"
+PUBLISH_DIR="/Users/q/AIWorkspace/04_AI_Center/YZBIDS/National_Admixture_Bids_Platform/outputs/tencent-static"
 RETRY_PUSH="$PROJECT_DIR/retry_push.sh"
 LOG_DIR="$PROJECT_DIR/logs"
 ERROR_LOG="$LOG_DIR/publish.log"

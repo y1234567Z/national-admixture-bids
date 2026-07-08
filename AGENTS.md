@@ -2,7 +2,7 @@
 
 本目录是全国外加剂招标监测平台的网站发布目录，也是 GitHub 仓库目录：
 
-`/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/outputs/tencent-static`
+`/Users/q/AIWorkspace/04_AI_Center/YZBIDS/National_Admixture_Bids_Platform/outputs/tencent-static`
 
 本目录用于：
 - index.html
@@ -17,7 +17,7 @@
 
 凡是涉及 GitHub 发布、git status、git commit、git push，必须先进入本目录：
 
-cd "/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/outputs/tencent-static"
+cd "/Users/q/AIWorkspace/04_AI_Center/YZBIDS/National_Admixture_Bids_Platform/outputs/tencent-static"
 
 禁止在项目根目录执行 git status、git commit 或 git push。
 
@@ -35,7 +35,7 @@ cd "/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/outputs/t
 
 任何发布错误必须写入项目根目录：
 
-`/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/logs/publish.log`
+`/Users/q/AIWorkspace/04_AI_Center/YZBIDS/National_Admixture_Bids_Platform/logs/publish.log`
 
 ## GitHub SSH 发布规则
 

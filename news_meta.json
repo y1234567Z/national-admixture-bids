@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25 08:06",
+  "generatedAt": "2026-07-08 23:43",
   "totalNews": 8,
   "todayNew": 0,
   "highValueCount": 2,
@@ -11,7 +11,7 @@
   "highTrackingCount": 3,
   "noTrackingCount": 0,
   "trackingRule": "trackingValue 从 100 起，根据混凝土施工、拌合站、主体施工、二衬、主体完工、项目完工等进度关键词扣分。",
-  "manualWechatDir": "/Users/q/AIWorkspace/03_AI项目/全国外加剂招标监测平台/manual/wechat_articles",
+  "manualWechatDir": "/Users/q/AIWorkspace/04_AI_Center/YZBIDS/National_Admixture_Bids_Platform/manual/wechat_articles",
   "admixtureOpportunityRule": "减水剂/速凝剂机会优先看项目刚中标、项目部成立、实验室/试验室/拌合站建设、材料试验、配合比验证和开工前准备；主体施工、贯通、合龙、完工降低机会。",
   "articleFirstMode": true,
   "discoveredArticleCount": 1452,
