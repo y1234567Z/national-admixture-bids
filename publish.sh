@@ -124,6 +124,22 @@ if [ "$PUSH_CODE" -eq 0 ]; then
   echo "push 是否成功：是"
   echo "Cloudflare 部署状态：GitHub push 成功后自动触发"
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] publish.sh commit ${COMMIT_ID} 已成功 push，等待 Cloudflare 部署。" >> "$ERROR_LOG"
+  python3 - "$DAILY_REPORT" "$COMMIT_ID" <<'PY'
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+commit_id = sys.argv[2]
+text = path.read_text(encoding="utf-8")
+blocks = text.split("---\n")
+for index, block in enumerate(blocks):
+    if f"commit id：{commit_id}" in block:
+        block = block.replace("push结果：本地生成成功，等待 GitHub 推送", "push结果：成功")
+        block = block.replace("Cloudflare结果：等待 GitHub push 成功后自动部署", "Cloudflare结果：已触发自动部署")
+        blocks[index] = block
+        break
+path.write_text("---\n".join(blocks), encoding="utf-8")
+PY
   echo "✅ GitHub发布成功"
   echo "✅ Cloudflare自动部署中"
   echo "✅ 网站地址：https://www.yzbids.cn"
